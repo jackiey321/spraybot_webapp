@@ -3,6 +3,6 @@ body {
   font-family: 'Inter', sans-serif; 
 }
 
-.offcanvas {
-  height: 700px;
+.offcanvas-bottom {
+  height: 80%;
 }
