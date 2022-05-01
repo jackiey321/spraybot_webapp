@@ -155,3 +155,47 @@ p {
   border-collapse: separate;
   border-spacing: 20px;
 }
+
+/****************************
+       Home View
+****************************/
+
+#next-mission {
+  width: 100%;
+  height: 140px;
+  background: #FFF;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+
+#mission-info {
+  width: 60%;
+  text-align: left;
+}
+
+#robot-info {
+  width: 40%;
+  text-align: center;
+}
+
+#robot-image {
+  width: 96px;
+  height: 73px;
+}
+
+#next-robot-label {
+  color: #7D7D7D;
+}
+
+#missions-panel-closed {
+  width: 100%;
+  height: 302px;
+  border-radius: 30px 30px 0px 0px;
+  background-color: #FFF;
+  position: absolute;
+  bottom: 0;
+}
+
+#missions-panel-body {
+  padding-top: 0;
+}
