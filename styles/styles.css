@@ -1,9 +1,17 @@
 
+/****************************
+           Global
+****************************/
+
 body { 
   font-family: 'Inter', sans-serif; 
   background-image: url('../images/map.png');
   background-size: cover;
 }
+
+/****************************
+       Swipe Up Panel
+****************************/
 
 #panel {
   width: 100%;
@@ -35,20 +43,33 @@ body {
   right: 20px;
 }
 
-.offcanvas-header {
-  display: flex;
-  align-items:flex-end;
-}
-
-.time-remaining {
-  margin-bottom: 3px;
-}
-
 .offcanvas-bottom {
   height: 80%;
   border-radius: 30px;
 }
 
+.offcanvas-header {
+  display: flex;
+  align-items:flex-end;
+}
+
 .offcanvas-body {
   padding-top: 0;
+}
+
+/****************************
+       Progress View
+****************************/
+
+.time-remaining {
+  margin-bottom: 3px;
+}
+
+.progress {
+  border-radius: 17.5px;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #23DDBC 1.07%, #64FAC8 101.33%);
+  border-radius: 17.5px;
 }
