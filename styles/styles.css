@@ -9,6 +9,10 @@ body {
   background-size: cover;
 }
 
+h6 {
+  font-size: 14px;
+}
+
 /****************************
        Swipe Up Panel
 ****************************/
@@ -28,6 +32,7 @@ body {
 }
 
 .panel-expand {
+  font-size: 14px;
   height: 50px;
   border-color: #FFF;
 }
@@ -49,6 +54,7 @@ body {
 }
 
 .offcanvas-header {
+  padding-top: 0;
   display: flex;
   align-items:flex-end;
 }
@@ -63,13 +69,16 @@ body {
 
 .time-remaining {
   margin-bottom: 3px;
+  color: #7D7D7D;
 }
 
 .progress {
+  height: 30px;
   border-radius: 17.5px;
 }
 
 .progress-bar {
+  height: 30px;
   background: linear-gradient(90deg, #23DDBC 1.07%, #64FAC8 101.33%);
   border-radius: 17.5px;
 }
