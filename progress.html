@@ -17,14 +17,14 @@
   <body>
     <div id="panel" class="container">
       <div class="swipe">
-        <button class="btn btn-outline-dark panel-expand" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">See Details</button>
+        <button class="btn btn-outline-dark panel-expand" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><img width="100" src="images/swipe-up.png"></button>
       </div>
 
       <!-- preview status -->
       <div class="offcanvas-header">
         <div class="panel-titles">
           <h6 class="offcanvas-title">Mission Status</h6>
-          <h5 class="offcanvas-title">In Progress</h5>
+          <h4 class="offcanvas-title font-weight-bold">In Progress</h4>
         </div>
         <h6 class="time-remaining">1 hr 34 min left</h6>
         <button type="button" class="btn-close text-reset panel-close"></button>
@@ -38,19 +38,66 @@
       <!-- swipe up status panel -->
       <div class="offcanvas offcanvas-bottom" id="offcanvasBottom" data-bs-backdrop="false" aria-labelledby="offcanvasBottomLabel">
         <div class="swipe">
-          <button class="btn btn-outline-dark panel-expand" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Hide Details</button>
+          <button class="btn btn-outline-dark panel-expand" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><img width="100" src="images/swipe-up.png"></button>
         </div>
         <div class="offcanvas-header">
           <div class="panel-titles">
             <h6 class="offcanvas-title">Mission Status</h6>
-            <h5 class="offcanvas-title" id="offcanvasBottomLabel">In Progress</h5>
+            <h2 class="offcanvas-title font-weight-bold" id="offcanvasBottomLabel">In Progress</h2>
           </div>
           <h6 class="time-remaining">1 hr 34 min left</h6>
           <button type="button" class="btn-close text-reset panel-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
+          <!-- mission progress -->
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+          <!-- robot status -->
+          <div id="robot-status" class="d-flex justify-content-between">
+            <div id="connectivity" class="mt-4 p-2">
+              <img class="w-100" src="images/status/robot.png">
+              <img class="w-100" src="images/status/connected.png">
+            </div>
+            <div class="mt-4 p-2 icon-status">
+              <img src="images/status/battery-icon.png">
+              <div class="mt-2">
+                <h6 class="m-0">3 hr 47 min</h6>
+                <p class="m-0">remaining</p>
+              </div>
+            </div>
+            <div class="mt-4 p-2 icon-status">
+              <img src="images/status/herb-icon.png">
+              <div class="mt-2">
+                <h6 class="m-0">2 hr 14 min</h6>
+                <p class="m-0">remaining</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- pause -->
+          <button id="pause" class="btn btn-dark mt-4 w-100"><img width="20" src="images/status/pause.png">&nbsp;&nbsp;Pause</button>
+          <hr>
+
+          <!-- spray progress -->
+          <div>
+            <h4>Spray Progress</h4>
+            <div id="rep-blocks" class="mt-2 d-table">
+              <div class="block p-3 text-center d-table-cell align-middle">
+                <h5>35 MINS</h5>
+                <p>REMAINING</p>
+              </div>
+              <div class="block p-3 text-center d-table-cell align-middle">
+                <h5>35 MINS</h5>
+                <p>REMAINING</p>
+              </div>
+              <div class="add-block p-3 text-center d-table-cell align-middle">
+                <img class="mb-1" width="45" src="images/status/add-block.png">
+                <p>Add Block</p>
+              </div>
+            </div>
+            <h5 class="mx-3">&emsp;&nbsp;&ensp;AX9077 ------ MB4035</h5>
           </div>
         </div>
       </div>
