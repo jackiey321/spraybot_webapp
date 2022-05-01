@@ -15,18 +15,42 @@
     <title>SprayBot</title>
   </head>
   <body>
-    <h1 class="m-4">Welcome, Angel!</h1>
+    <div id="panel" class="container">
+      <div class="swipe">
+        <button class="btn btn-outline-dark panel-expand" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">See Details</button>
+      </div>
 
-    <div class="container">
-      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
-
-      <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom"  data-bs-scroll="true" data-bs-backdrop="false"  aria-labelledby="offcanvasBottomLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class="offcanvas-header">
+        <div class="panel-titles">
+          <h6 class="offcanvas-title">Mission Status</h6>
+          <h5 class="offcanvas-title" id="offcanvasBottomLabel">In Progress</h5>
         </div>
-        <div class="offcanvas-body small">
-          ...
+        <h6 class="time-remaining">1 hr 34 min left</h6>
+        <button type="button" class="btn-close text-reset panel-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="offcanvas offcanvas-bottom" id="offcanvasBottom" data-bs-scroll="true" data-bs-backdrop="false" aria-labelledby="offcanvasBottomLabel">
+        <div class="swipe">
+          <button class="btn btn-outline-dark panel-expand" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Hide Details</button>
+        </div>
+  
+        <div class="offcanvas-header">
+          <div class="panel-titles">
+            <h6 class="offcanvas-title">Mission Status</h6>
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">In Progress</h5>
+          </div>
+          <h6 class="time-remaining">1 hr 34 min left</h6>
+          <button type="button" class="btn-close text-reset panel-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
       </div>
     </div>

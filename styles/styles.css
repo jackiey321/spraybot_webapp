@@ -5,10 +5,50 @@ body {
   background-size: cover;
 }
 
-#panel-button {
+#panel {
+  width: 100%;
+  height: 180px;
+  border-radius: 30px 30px 0px 0px;
+  background-color: #FFF;
   position: absolute;
+  bottom: 0;
+}
+
+.swipe {
+  display: flex;
+  justify-content: center;
+}
+
+.panel-expand {
+  height: 50px;
+  border-color: #FFF;
+}
+
+.panel-expand:hover {
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+.panel-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.offcanvas-header {
+  display: flex;
+  align-items:flex-end;
+}
+
+.time-remaining {
+  margin-bottom: 3px;
 }
 
 .offcanvas-bottom {
   height: 80%;
+  border-radius: 30px;
+}
+
+.offcanvas-body {
+  padding-top: 0;
 }
