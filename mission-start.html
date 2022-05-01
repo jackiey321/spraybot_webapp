@@ -15,26 +15,63 @@
     <title>SprayBot</title>
   </head>
   <body>
-    <header>
-      
+    <header class="mt-2 d-flex justify-content-between align-items-center">
+      <button type="button" class="btn"><img width="30" height="30" src="images/back-arrow.png"></button>
+      <h3>Review</h3> 
+      <button type="button" class="btn"><img height="40" src="images/dots.png"></button>
     </header>
 
     <!-- tabs -->
-    <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
+    <ul class="nav nav-pills nav-fill mb-3 p-3" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Route</button>
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#route" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Route</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Vehicle</button>
+        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#vehicle" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Vehicle</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Details</button>
+        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#details" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Details</button>
       </li>
     </ul>
-    <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+
+    <!-- tab content -->
+    <div class="tab-content px-3" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="route" role="tabpanel" aria-labelledby="pills-home-tab">
+        <!-- header -->
+        <h2>Standard Loop 1</h2>
+        <h4 class="mt-4">Blocks to spray</h4>
+        <div class="input-group mt-2">
+          <div class="form-outline">
+            <input type="search" id="search" class="form-control" placeholder="Search"/>
+          </div>
+        </div>
+
+        <!-- block list -->
+        <table class="table table-striped mt-3">
+          <thead>
+            <tr>
+              <th scope="col">Block spray order</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="images/reorder.png">&emsp;B30A39<img class="x" src="images/x.png"></td>
+            </tr>
+            <tr>
+              <td><img src="images/reorder.png">&emsp;L14093<img class="x" src="images/x.png"></td>
+            </tr>
+            <tr>
+              <td><img src="images/reorder.png">&emsp;CK3I94<img class="x" src="images/x.png"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- route -->
+        <img class="w-100 mt-4" src="images/route.png">
+        <button class="btn btn-dark gg-button mt-5 mb-5 w-100" data-bs-target="#vehicle">Done</button>
+      </div>
+      <div class="tab-pane fade" id="vehicle" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+      <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
     </div>
     
 
