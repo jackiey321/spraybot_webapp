@@ -199,3 +199,7 @@ p {
 #missions-panel-body {
   padding-top: 0;
 }
+
+.mission-date {
+  text-align: left;
+}
