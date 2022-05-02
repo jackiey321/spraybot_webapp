@@ -199,11 +199,20 @@ thead {
   background: #FFF;
   border-radius: 10px;
   border: 1px solid #000000;
+  margin-bottom: 32px;
 }
 
-#mission-info {
+#future-mission {
+  width: 100%;
+  height: 72px;
+  background: #FFF;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  margin-bottom: 11px;
+}
+
+.mission-info {
   width: 60%;
-  text-align: left;
 }
 
 #robot-info {
@@ -214,6 +223,24 @@ thead {
 #robot-image {
   width: 96px;
   height: 73px;
+}
+
+.future-mission-info {
+  width: 40%;
+}
+
+.future-robot-info {
+  width: 30%;
+  text-align: center;
+}
+
+.future-mission-date {
+  width: 30%;
+}
+
+#robot-image-2 {
+  width: 60px;
+  height: 45px;
 }
 
 #next-robot-label {
@@ -233,6 +260,16 @@ thead {
   padding-top: 0;
 }
 
-.mission-date {
-  text-align: left;
+#next-mission-date {
+  text-align: right;
+  padding: 3px 10px 0px 0px;
+  font-weight: 700;
+  color: #179485;
+}
+
+.future-mission-date {
+  text-align: right;
+  padding: 3px 10px 0px 0px;
+  font-weight: 700;
+  color: #7D7D7D;
 }
