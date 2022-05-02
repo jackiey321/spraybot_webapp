@@ -36,6 +36,19 @@ p {
   border-radius: 10px;
 }
 
+.btn {
+  height: 55px !important;
+}
+
+th {
+  height: 40px;
+}
+
+td {
+  height: 55px;
+  vertical-align: middle;
+}
+
 /****************************
             Map
 ****************************/
@@ -125,6 +138,53 @@ thead {
 
 .x {
   float: right;
+}
+
+#robot02 {
+  mix-blend-mode: luminosity;
+}
+
+.vehicle-option {
+  border: 1px solid #7D7D7D;
+  border-radius: 15px;
+}
+
+.image-text-inline > * {
+  vertical-align: middle;
+}
+
+.image-text-inline h6 {
+  margin-bottom: 5px;
+}
+
+.buttons {
+  width: 93%;
+  position: absolute;
+  bottom: 0;
+}
+
+.short {
+  width: 25%;
+  color: #179485;
+  border-color: #179485;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.long {
+  width: 73% !important;
+}
+
+.long.disabled {
+  color: #7D7D7D !important;
+  background-color: #E4E4E4 !important;
+  border-width: 0px;
+  border-radius: 10px;
+}
+
+.pill {
+  border-radius: 17.5px;
+  background-color: #C4C4C4;
 }
 
 /****************************
