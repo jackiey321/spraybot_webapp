@@ -58,6 +58,31 @@ td {
   background-size: cover;
 }
 
+.menu {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+
+.layers {
+  position: absolute;
+  left: 20px;
+  top: 550px;
+}
+
+.location {
+  position: absolute;
+  left: 100px;
+  top: 500px;
+}
+
+.robot-tag {
+  position: absolute;
+  left: 248px;
+  top: 325px;
+}
+
+
 /****************************
        Swipe Up Panel
 ****************************/
