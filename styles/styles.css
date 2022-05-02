@@ -1,4 +1,3 @@
-
 /****************************
            Global
 ****************************/
@@ -29,6 +28,12 @@ h6 {
 
 p {
   font-size: 10px;
+}
+
+.gg-button {
+  background-color: #179485;
+  border-width: 0px;
+  border-radius: 10px;
 }
 
 /****************************
@@ -90,6 +95,39 @@ p {
 }
 
 /****************************
+       Mission Start
+****************************/
+
+.nav-pills .nav-link, .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #7D7D7D;
+  background-color: #ffffff;
+  border-bottom: 5px solid #E4E4E4;
+  border-radius: 0px;
+}
+
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  border-bottom: 5px solid #23DDBC;
+  border-radius: 0px;
+}
+
+#search {
+  border-radius: 10px;
+}
+
+table {
+  border: 1px solid #E4E4E4;
+}
+
+thead {
+  background-color: #E4E4E4;
+}
+
+.x {
+  float: right;
+}
+
+/****************************
        Progress View
 ****************************/
 
@@ -129,11 +167,6 @@ p {
 
 .icon-status p {
   color: #7D7D7D;
-}
-
-#pause {
-  background-color: #179485;
-  border-radius: 10px;
 }
 
 .block {
