@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- meta tags -->
@@ -15,8 +14,102 @@
 
     <title>SprayBot</title>
   </head>
-  <body>
-    <h1 class="m-4">Welcome, Angel!</h1>
+  <body class="map">
+    <div id="missions-panel-closed" class="container">
+      <div class="swipe">
+        <button class="btn btn-outline-dark panel-expand" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><img width="100" src="images/swipe-up.png"></button>
+      </div>
+
+      <!-- preview missions -->
+      <div class="offcanvas-header">
+        <div class="panel-titles">
+          <h2 class="offcanvas-title font-weight-bold">Upcoming Missions</h2>
+        </div>
+        <button type="button" class="btn-close text-reset panel-close"></button>
+      </div>
+        <!-- upcoming missions -->
+      <div>
+        <div id="next-mission" class="d-flex" onclick="location.href='mission-start.html';">
+            <div id="robot-info" class="p-3 pt-2">
+              <div class="mt-2">
+                  <h6 id="next-robot-label" class="mb-sm-1 text-center">Robot 02</h6>
+              </div>
+              <img id="robot-image" src="images/status/robot.png">
+            </div>
+            <div class="p-2 mission-info">
+                <div id="next-mission-date"> 
+                    <h6>TODAY</h6>
+                </div>
+                <div class="mt-2">
+                    <h4 class="m-0 pt-1">Standard Loop 1</h4>
+                    <h6 class="m-0 pt-1">3 hours, 30 minutes</h6>
+                    <h6 class="m-0 pt-1">4 blocks</h6>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+      <!-- swipe up missions panel -->
+      <div class="offcanvas offcanvas-bottom" id="offcanvasBottom" data-bs-backdrop="false" aria-labelledby="offcanvasBottomLabel">
+        <div class="swipe">
+          <button class="btn btn-outline-dark panel-expand" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><img width="100" src="images/swipe-up.png"></button>
+        </div>
+        <div class="offcanvas-header">
+          <div class="panel-titles">
+            <h2 class="offcanvas-title font-weight-bold" id="offcanvasBottomLabel">Upcoming Missions</h2>
+          </div>
+          <button type="button" class="btn-close text-reset panel-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+          <!-- upcoming missions -->
+          <div>
+            <div id="next-mission" class="d-flex" onclick="location.href='mission-start.html';">
+                <div id="robot-info" class="p-3 pt-2">
+                  <div class="mt-2">
+                      <h6 id="next-robot-label" class="mb-sm-1 text-center">Robot 02</h6>
+                  </div>
+                  <img id="robot-image" src="images/status/robot.png">
+                </div>
+                <div class="p-2 mission-info">
+                    <div id="next-mission-date"> 
+                        <h6>TODAY</h6>
+                    </div>
+                    <div class="mt-2">
+                        <h4 class="m-0 pt-1">Standard Loop 1 </h4>
+                        <h6 class="m-0 pt-1">3 hours, 30 minutes</h6>
+                        <h6 class="m-0 pt-1">4 blocks</h6>
+                    </div>
+                </div>
+              </div>
+
+              <div id="future-mission" class="d-flex">
+                <div class="p-3 pt-2 future-robot-info">
+                  <img id="robot-image-2" src="images/future-mission-robot.png">
+                </div>
+                <div class="mt-0 p-2 future-mission-info">
+                        <h4 class="m-0 pt-1">Orchard Loop</h4>
+                        <h6 class="m-0 pt-1">3 hours, 30 minutes</h6>
+                </div>
+                <div class="future-mission-date"> 
+                        <h6 class="pt-1 m-0">04/29/22</h6>
+                </div>
+              </div>
+
+              <div id="future-mission" class="d-flex">
+                <div class="p-3 pt-2 future-robot-info">
+                  <img id="robot-image-2" src="images/future-mission-robot.png">
+                </div>
+                <div class="mt-0 p-2 future-mission-info">
+                        <h4 class="m-0 pt-1">Orchard Loop</h4>
+                        <h6 class="m-0 pt-1">3 hours, 30 minutes</h6>
+                </div>
+                <div class="future-mission-date"> 
+                        <h6 class="pt-1 m-0">05/15/22</h6>
+                </div>
+              </div>
+          </div>
 
     <!-- bootstrap w/ popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
