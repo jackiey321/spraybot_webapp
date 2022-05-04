@@ -5,7 +5,6 @@
 @import url('https://rsms.me/inter/inter.css');
 body { 
   font-family: 'Inter', sans-serif;
-  overflow-y: hidden;
 }
 
 @supports (font-variation-settings: normal) {
