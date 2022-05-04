@@ -2,8 +2,13 @@
            Global
 ****************************/
 
+@import url('https://rsms.me/inter/inter.css');
 body { 
-  font-family: 'Inter', sans-serif; 
+  font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  body { font-family: 'Inter var', sans-serif; }
 }
 
 h2 {
@@ -20,14 +25,22 @@ h4 {
 
 h5 {
   font-size: 16px;
+  font-weight: 400;
 }
 
 h6 {
   font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0;
 }
 
 p {
   font-size: 10px;
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 600;
 }
 
 .gg-button {
@@ -125,7 +138,7 @@ td {
 .offcanvas-header {
   padding-top: 0;
   display: flex;
-  align-items:flex-end;
+  align-items: flex-end;
 }
 
 .offcanvas-body {
@@ -278,54 +291,36 @@ thead {
        Home View
 ****************************/
 
-#next-mission {
+.next-mission {
   width: 100%;
-  height: 140px;
-  background: #FFF;
-  border-radius: 10px;
-  border: 1px solid #000000;
+  height: 135px;
+  background: #23DDBC;
+  border-radius: 15px;
   margin-bottom: 32px;
 }
 
-#future-mission {
+.future-mission {
   width: 100%;
-  height: 72px;
-  background: #FFF;
-  border-radius: 10px;
-  border: 1px solid #000000;
+  height: 85px;
+  background-color: rgba(35, 221, 188, 0.4);
+  border-radius: 15px;
   margin-bottom: 11px;
 }
 
 .mission-info {
-  width: 60%;
+  width: 65%;
 }
 
-#robot-info {
-  width: 40%;
-  text-align: center;
-}
-
-#robot-image {
-  width: 96px;
-  height: 73px;
-}
-
-.future-mission-info {
-  width: 100%;
+.robot-info {
+  width: 35%;
 }
 
 .future-robot-info {
-  width: 30%;
-  text-align: center;
+  width: 20%;
 }
 
-.future-mission-date {
-  width: 30%;
-}
-
-#robot-image-2 {
-  width: 60px;
-  height: 45px;
+.future-mission-info {
+  width: 80%;
 }
 
 #next-robot-label {
@@ -334,6 +329,7 @@ thead {
 
 #missions-panel-closed {
   width: 100%;
+  padding: 0;
   height: 280px;
   border-radius: 30px 30px 0px 0px;
   background-color: #FFF;
@@ -341,20 +337,11 @@ thead {
   bottom: 0;
 }
 
-#missions-panel-body {
-  padding-top: 0;
-}
-
-#next-mission-date {
-  text-align: right;
-  padding: 3px 10px 0px 0px;
+.mission-date {
+  float: right;
+  text-align: center;
+  background-color: #FFF;
+  border-radius: 10px;
   font-weight: 700;
   color: #179485;
-}
-
-.future-mission-date {
-  text-align: right;
-  padding: 3px 10px 0px 0px;
-  font-weight: 700;
-  color: #7D7D7D;
 }
