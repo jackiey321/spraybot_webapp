@@ -282,6 +282,14 @@ td {
   overflow-y: scroll;
 }
 
+.modal-content {
+  border-radius: 20px;
+}
+
+.modal-body h3 {
+  font-weight: 500;
+}
+
 /****************************
        Progress View
 ****************************/
@@ -340,7 +348,7 @@ td {
 }
 
 /****************************
-       Home View
+          Home View
 ****************************/
 
 .next-mission {

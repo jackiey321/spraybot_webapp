@@ -37,3 +37,11 @@ function selectVehicle(selection) {
     $('#next').addClass('disabled');
   }
 }
+
+$(window).on('shown.bs.modal', function (e) {
+  const myTimeout = setTimeout(switchModal, 3000);
+  function switchModal() {
+    $('#robot-located').modal('show');
+    $('#locating-robot').modal('hide');
+  }
+});

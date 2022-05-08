@@ -232,8 +232,34 @@
           </div>
   
           <!-- buttons -->
-          <button class="btn btn-outline short back mt-5 mb-5" onclick="showVehicleTab()">Back</button>
-          <a href="progress.html"><button class="btn btn-dark long gg-button mt-5 mb-5 w-100" onclick="startRobot()">Confirm Mission</button></a>
+          <button class="btn btn-outline short back mt-5 mb-5" type="button" onclick="showVehicleTab()">Back</button>
+          <button id="confirm" class="btn btn-dark long gg-button mt-5 mb-5 w-100" type="button" data-bs-toggle="modal" data-bs-target="#locating-robot" onclick="startRobot()">Confirm Mission</button>
+
+          <!-- locating robot -->
+          <div class="modal fade" id="locating-robot" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center m-5">
+                  <h3>Locating</h3>
+                  <h3><strong>Robot 01</strong></h3>
+                  <h3><strong>...</strong></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- robot located -->
+          <div class="modal fade" id="robot-located" tabindex="-1" role="dialog" aria-hidden="true" onclick="location.href='progress.html';">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center m-5">
+                  <h3>Located <strong>Robot 01</strong></h3>
+                  <br>
+                  <h3>Please bring <strong>Robot 01</strong> to <strong>Waypoint 05</strong> to start mission.</h3>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
