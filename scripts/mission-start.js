@@ -10,16 +10,30 @@ function showDetailsTab() {
   $('#details-tab').tab('show')
 }
 
-let selected = false;
-function selectVehicle() {
-  if (!selected){
-    $('#selection').attr("src", "images/mission-start/selected.png");
+let prev = null;
+
+function selectVehicle(selection) {
+  let img = $(selection).find("img.select")[0];
+
+  if($(img).attr("src").includes("unselected")) {
+    // deselect previous selection if it exists
+    if(prev != null) {
+      $(prev).removeClass('selected');
+      let prev_img = $(prev).find("img.select")[0];
+      $(prev_img).attr("src", "images/mission-start/unselected.png");
+    }
+    // select new vehicle
+    prev = selection;
+    $(selection).addClass("selected");
+    $(img).attr("src", "images/mission-start/selected.png");
+    // enable next button
     $('#next').removeClass('disabled');
-    selected = true;
   }
   else {
-    $('#selection').attr("src", "images/mission-start/unselected.png");
+    // deselect vehicle
+    $(img).attr("src", "images/mission-start/unselected.png");
+    $(selection).removeClass('selected');
+    // disable next button
     $('#next').addClass('disabled');
-    selected = false;
   }
 }
