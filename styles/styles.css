@@ -261,9 +261,12 @@ td {
   border-width: 2px;
 }
 
-.long.disabled {
+.gg-button.disabled {
   color: #7D7D7D !important;
   background-color: #E4E4E4 !important;
+}
+
+.long.disabled {
   border-width: 0px;
   border-radius: 10px;
 }
@@ -288,6 +291,40 @@ td {
 
 .modal-body h3 {
   font-weight: 500;
+}
+
+/****************************
+       Progress View
+****************************/
+.pre-map {
+  background-image: url('../images/pre-progress/pre-map1.png');
+  background-size: cover;
+}
+
+#rep-blocks {
+  width: 380px;
+  overflow-x: scroll;
+}
+
+.block {
+  color: #179485;
+  width: 102px !important;
+  height: 180px;
+  background: #DCFFF9;
+  border-radius: 10px;
+}
+
+.add-block {
+  width: 102px;
+  height: 180px;
+  background: #FFF;
+  border-radius: 10px;
+  border: 2px dotted #7D7D7D;
+}
+
+.d-table {
+  border-collapse: separate;
+  border-spacing: 15px;
 }
 
 /****************************
@@ -330,21 +367,6 @@ td {
 
 .icon-status p {
   color: #7D7D7D;
-}
-
-.block {
-  width: 102px;
-  height: 180px;
-  background: #DCFFF9;
-  border-radius: 10px;
-}
-
-.add-block {
-  width: 102px;
-  height: 180px;
-  background: #FFF;
-  border-radius: 10px;
-  border: 2px dotted #179485;
 }
 
 /****************************
