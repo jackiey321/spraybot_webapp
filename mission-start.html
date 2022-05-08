@@ -29,13 +29,13 @@
     <!-- tabs -->
     <ul class="nav nav-pills nav-fill mb-3 p-3" id="mission-tabs" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="route-tab" data-bs-toggle="pill" data-bs-target="#route" type="button" role="tab" aria-controls="pills-route" aria-selected="true">1. Route</button>
+        <button class="nav-link active" id="route-tab" data-bs-toggle="pill" data-bs-target="#route" type="button" role="tab" aria-controls="pills-route" aria-selected="true"><strong>1</strong> Route</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="vehicle-tab" data-bs-toggle="pill" data-bs-target="#vehicle" type="button" role="tab" aria-controls="pills-vehicle" aria-selected="false">2. Vehicle</button>
+        <button class="nav-link" id="vehicle-tab" data-bs-toggle="pill" data-bs-target="#vehicle" type="button" role="tab" aria-controls="pills-vehicle" aria-selected="false"><strong>2</strong> Vehicle</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="details-tab" data-bs-toggle="pill" data-bs-target="#details" type="button" role="tab" aria-controls="pills-details" aria-selected="false">3. Details</button>
+        <button class="nav-link" id="details-tab" data-bs-toggle="pill" data-bs-target="#details" type="button" role="tab" aria-controls="pills-details" aria-selected="false"><strong>3</strong> Details</button>
       </li>
     </ul>
 
@@ -43,39 +43,46 @@
       <!-- review mission tab -->
       <div class="tab-pane fade show active" id="route" role="tabpanel" aria-labelledby="pills-home-tab">
         <!-- header -->
-        <h2 class="bold">Orchard Loop</h2>
-        <h4 class="mt-4">Blocks to spray</h4>
-        <div class="input-group mt-2">
-          <div class="form-outline">
-            <input type="search" id="search" class="form-control" placeholder="Search"/>
-          </div>
+        <h4>Mission Name</h4>
+        <div class="d-flex">
+          <h2 class="mt-3 me-3 bold">Orchard Loop</h2>
+          <img class="my-auto" width="24" height="24" src="images/mission-start/edit.png">
         </div>
+        <h4 class="mt-3">Blocks to spray</h4>
 
         <!-- block list -->
-        <table class="table table-striped mt-3">
+        <table class="table mt-3 rounded">
           <thead>
             <tr>
-              <th scope="col">Block spray order</th>
+              <th class="bold" scope="col">Block Spray Order</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><img src="images/mission-start/reorder.png">&emsp;B30A39<img class="x" src="images/mission-start/x.png"></td>
+              <td><img width="10" src="images/mission-start/reorder.png">&emsp;B30A39<img class="x" src="images/mission-start/x.png"></td>
             </tr>
             <tr>
-              <td><img src="images/mission-start/reorder.png">&emsp;L14093<img class="x" src="images/mission-start/x.png"></td>
+              <td><img width="10" src="images/mission-start/reorder.png">&emsp;L14093<img class="x" src="images/mission-start/x.png"></td>
             </tr>
             <tr>
-              <td><img src="images/mission-start/reorder.png">&emsp;CK3I94<img class="x" src="images/mission-start/x.png"></td>
+              <td><img width="10" src="images/mission-start/reorder.png">&emsp;J39W30<img class="x" src="images/mission-start/x.png"></td>
             </tr>
           </tbody>
+          <tfoot>
+            <tr>
+              <th class="bold align-middle" scope="col"><img class="me-2" width="25" height="25" src="images/mission-start/add.png">Add new blocks</th>
+            </tr>
+          </tfoot>
         </table>
 
         <!-- route -->
         <img class="w-100 mt-4" src="images/mission-start/route.png">
 
         <!-- buttons -->
-        <button class="btn btn-dark gg-button mt-5 mb-5 w-100" onclick="showVehicleTab()">Next</button>
+        <div>
+          <button class="btn btn-dark short gg-button mt-5 mb-5">Save Mission</button>
+          <button class="btn btn-dark long gg-button mt-5 mb-5" onclick="showVehicleTab()">Next</button>
+        </div>
       </div>
 
       <!-- vehicle tab -->
@@ -112,7 +119,7 @@
 
         <!-- buttons -->
         <div class="buttons">
-          <button class="btn btn-outline short mt-5 mb-5" onclick="showRouteTab()">Back</button>
+          <button class="btn btn-outline short back mt-5 mb-5" onclick="showRouteTab()">Back</button>
           <button id="next" class="btn btn-dark long gg-button disabled mt-5 mb-5" onclick="showDetailsTab()">Next</button>
         </div>
       </div>
@@ -175,7 +182,7 @@
         </div>
 
         <!-- buttons -->
-        <button class="btn btn-outline short mt-5 mb-5" onclick="showVehicleTab()">Back</button>
+        <button class="btn btn-outline short back mt-5 mb-5" onclick="showVehicleTab()">Back</button>
         <a href="progress.html"><button class="btn btn-dark long gg-button mt-5 mb-5 w-100" onclick="startRobot()">Start Mission</button></a>
       </div>
     </div>
