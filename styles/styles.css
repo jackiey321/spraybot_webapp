@@ -54,6 +54,14 @@ p {
   height: 55px !important;
 }
 
+table {
+  font-size: 14px;
+}
+
+.w-40 {
+  width: 40%;
+}
+
 /****************************
             Map
 ****************************/
@@ -154,17 +162,12 @@ p {
   border-radius: 0px;
 }
 
-#search {
-  border-radius: 10px;
-}
-
 table {
   background-color: #EEFFFC;
 }
 
 th {
   height: 40px;
-  border: none;
 }
 
 thead tr {
@@ -176,6 +179,10 @@ thead tr {
   border-top: none;
 }
 
+.table-bordered td {
+  border: 5px solid #FFF;
+}
+
 tfoot tr {
   color: #179485;
   background-color: #BDF5EB;
@@ -185,7 +192,6 @@ tfoot tr {
 td {
   height: 55px;
   vertical-align: middle;
-  border: none;
   border-top: 3px solid #BDF5EB;
 }
 
@@ -193,13 +199,43 @@ td {
   float: right;
 }
 
-#robot02 {
-  mix-blend-mode: luminosity;
+.vehicle-option {
+  border-radius: 15px;
+  height: 87px;
 }
 
-.vehicle-option {
-  border: 1px solid #7D7D7D;
-  border-radius: 15px;
+.ready {
+  background-color: rgba(35, 221, 188, 0.25);
+}
+
+.ready h6 {
+  color: #179485;
+}
+
+.not-ready {
+  background-color: #FFDFA1;
+}
+
+.not-ready h6 {
+  color: #FF8A00;
+}
+
+.selected {
+  color: #FFF;
+  background-color: #179485;
+}
+
+.selected h5 {
+  font-weight: 600;
+}
+
+.selected h6 {
+  color: #FFF;
+}
+
+.busy {
+  color: #7D7D7D;
+  background-color: #E5E5E5;
 }
 
 .image-text-inline > * {
@@ -241,6 +277,15 @@ td {
 .pill {
   border-radius: 17.5px;
   background-color: #C4C4C4;
+}
+
+.robot-stats {
+  width: 130px;
+}
+
+#scroll {
+  height: 80%;
+  overflow-y: scroll;
 }
 
 /****************************
@@ -298,11 +343,6 @@ td {
   background: #FFF;
   border-radius: 10px;
   border: 2px dotted #179485;
-}
-
-.d-table {
-  border-collapse: separate;
-  border-spacing: 20px;
 }
 
 /****************************

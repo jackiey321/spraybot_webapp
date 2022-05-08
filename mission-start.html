@@ -39,151 +39,202 @@
       </li>
     </ul>
 
-    <div class="tab-content px-3" id="pills-tabContent">
-      <!-- review mission tab -->
-      <div class="tab-pane fade show active" id="route" role="tabpanel" aria-labelledby="pills-home-tab">
-        <!-- header -->
-        <h4>Mission Name</h4>
-        <div class="d-flex">
-          <h2 class="mt-3 me-3 bold">Orchard Loop</h2>
-          <img class="my-auto" width="24" height="24" src="images/mission-start/edit.png">
+    <div id="scroll">
+      <div class="tab-content px-3" id="pills-tabContent">
+        <!-- review mission tab -->
+        <div class="tab-pane fade show active" id="route" role="tabpanel" aria-labelledby="pills-home-tab">
+          <!-- header -->
+          <h4>Mission Name</h4>
+          <div class="d-flex">
+            <h2 class="mt-3 me-3 bold">Orchard Loop</h2>
+            <img class="my-auto" width="24" height="24" src="images/mission-start/edit.png">
+          </div>
+          <h4 class="mt-3">Blocks to spray</h4>
+  
+          <!-- block list -->
+          <table class="table mt-3">
+            <thead>
+              <tr>
+                <th class="bold" scope="col">Block Spray Order</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img width="10" src="images/mission-start/reorder.png">&emsp;B30A39<img class="x" src="images/mission-start/x.png"></td>
+              </tr>
+              <tr>
+                <td><img width="10" src="images/mission-start/reorder.png">&emsp;L14093<img class="x" src="images/mission-start/x.png"></td>
+              </tr>
+              <tr>
+                <td><img width="10" src="images/mission-start/reorder.png">&emsp;J39W30<img class="x" src="images/mission-start/x.png"></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th class="bold align-middle" scope="col"><img class="me-2" width="25" height="25" src="images/mission-start/add.png">Add new blocks</th>
+              </tr>
+            </tfoot>
+          </table>
+  
+          <!-- route -->
+          <img class="w-100 mt-4" src="images/mission-start/route.png">
+  
+          <!-- buttons -->
+          <div>
+            <button class="btn btn-dark short gg-button mt-5 mb-5">Save Mission</button>
+            <button class="btn btn-dark long gg-button mt-5 mb-5" onclick="showVehicleTab()">Next</button>
+          </div>
         </div>
-        <h4 class="mt-3">Blocks to spray</h4>
-
-        <!-- block list -->
-        <table class="table mt-3 rounded">
-          <thead>
-            <tr>
-              <th class="bold" scope="col">Block Spray Order</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><img width="10" src="images/mission-start/reorder.png">&emsp;B30A39<img class="x" src="images/mission-start/x.png"></td>
-            </tr>
-            <tr>
-              <td><img width="10" src="images/mission-start/reorder.png">&emsp;L14093<img class="x" src="images/mission-start/x.png"></td>
-            </tr>
-            <tr>
-              <td><img width="10" src="images/mission-start/reorder.png">&emsp;J39W30<img class="x" src="images/mission-start/x.png"></td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <th class="bold align-middle" scope="col"><img class="me-2" width="25" height="25" src="images/mission-start/add.png">Add new blocks</th>
-            </tr>
-          </tfoot>
-        </table>
-
-        <!-- route -->
-        <img class="w-100 mt-4" src="images/mission-start/route.png">
-
-        <!-- buttons -->
-        <div>
-          <button class="btn btn-dark short gg-button mt-5 mb-5">Save Mission</button>
-          <button class="btn btn-dark long gg-button mt-5 mb-5" onclick="showVehicleTab()">Next</button>
-        </div>
-      </div>
-
-      <!-- vehicle tab -->
-      <div class="tab-pane fade" id="vehicle" role="tabpanel" aria-labelledby="pills-profile-tab">
-        <!-- header -->
-        <h2>Assign Vehicle</h2>
-
-        <!-- vehicle options -->
-        <div class="vehicle-option mt-4 p-3 px-4 d-flex justify-content-between">
-          <div class="image-text-inline">
-            <img width="60" height="40" src="images/mission-start/robot01.png">
-            <div class="mx-4 stats d-inline-block ml-3">
-              <h4>Robot 01</h4>
-              <h6>93% charged</h6>
-              <h6>99% full</h6>
+  
+        <!-- vehicle tab -->
+        <div class="tab-pane fade" id="vehicle" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <!-- header -->
+          <h3 class="bold">Assign Vehicle</h3>
+  
+          <!-- vehicle options -->
+          <div class="vehicle-option ready mt-4 p-3 px-4 d-flex justify-content-between" onclick="selectVehicle(this)">
+            <h5 class="my-auto">Robot 01</h5>
+            <div class="robot-stats d-flex justify-content-between">
+              <img class="my-auto" width="17" height="30" src="images/mission-start/full-battery.png">
+              <img class="my-auto" width="28" height="30" src="images/mission-start/full-herb.png">
+              <div class="my-auto d-inline-block text-center">
+                <img class="select" width="30" height="30" src="images/mission-start/unselected.png">
+                <h6 class="mt-2">Select</h6>
+              </div>
             </div>
           </div>
-          <div class="my-auto d-inline-block text-center">
-            <img id="selection" onclick="selectVehicle()" width="30" height="30" src="images/mission-start/unselected.png">
-            <h6 class="mt-2">Select</h6>
-          </div>
-        </div>
-
-        <div class="vehicle-option mt-4 p-3 px-4 d-flex justify-content-between">
-          <div class="image-text-inline">
-            <img id="robot02" width="60" height="50" src="images/mission-start/robot02.png">
-            <div class="mx-4 stats d-inline-block ml-3">
-              <h4>Robot 02</h4>
-              <h6>89% charged</h6>
-              <h6>15% full</h6>
+  
+          <div class="vehicle-option ready mt-3 p-3 px-4 d-flex justify-content-between" onclick="selectVehicle(this)">
+            <h5 class="my-auto">Robot 02</h5>
+            <div class="robot-stats d-flex justify-content-between">
+              <img class="my-auto" width="17" height="30" src="images/mission-start/full-battery.png">
+              <img class="my-auto" width="28" height="30" src="images/mission-start/full-herb.png">
+              <div class="my-auto d-inline-block text-center">
+                <img class="select" width="30" height="30" src="images/mission-start/unselected.png">
+                <h6 class="mt-2">Select</h6>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- buttons -->
-        <div class="buttons">
-          <button class="btn btn-outline short back mt-5 mb-5" onclick="showRouteTab()">Back</button>
-          <button id="next" class="btn btn-dark long gg-button disabled mt-5 mb-5" onclick="showDetailsTab()">Next</button>
-        </div>
-      </div>
-
-      <!-- details tab -->
-      <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="pills-contact-tab">
-        <!-- header -->
-        <h2>Mission Details</h2>
-
-        <!-- details -->
-        <table class="table table-bordered mt-3">
-          <tbody>
-            <tr>
-              <td>Total time</td>
-              <td>2 hours, 21 minutes</td>
-            </tr>
-            <tr>
-              <td>Gallons of herbicide</td>
-              <td>45 gallons</td>
-            </tr>
-            <tr>
-              <td>Herbicide</td>
-              <td>Roundup</td>
-            </tr>
-            <tr>
-              <td>Refills needed</td>
-              <td><div class="p-2 pill text-center">2 refills needed	&rarr;</div></td>
-            </tr>
-            <tr>
-              <td>Blocks</td>
-              <td>3</td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <!-- refills map -->
-        <img class="w-100 mt-4" src="images/mission-start/refills-map.png">
-
-        <!-- refill details -->
-        <div class="image-text-inline ms-3 mt-5">
-          <img width="50" height="50" src="images/mission-start/refill-icon.png">
-          <div class="mx-4 stats d-inline-block ml-3">
-            <h4 class="mb-1">Refill 1</h4>
-            <h6>Est time 9:32 am</h6>
-            <div class="pill text-center">
-              <h6 class="m-0">Block B30A39</h6>
+  
+          <div class="vehicle-option not-ready mt-3 p-3 px-4 d-flex justify-content-between" onclick="selectVehicle(this)">
+            <h5 class="my-auto">Robot 03</h5>
+            <div class="robot-stats d-flex justify-content-between">
+              <img class="my-auto" width="17" height="30" src="images/mission-start/low-battery.png">
+              <img class="my-auto" width="28" height="30" src="images/mission-start/full-herb.png">
+              <div class="my-auto d-inline-block text-center">
+                <img class="select" width="30" height="30" src="images/mission-start/not-ready-unselected.png">
+                <h6 class="mt-2">Select</h6>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="image-text-inline ms-3 mt-4">
-          <img width="50" height="50" src="images/mission-start/refill-icon.png">
-          <div class="mx-4 stats d-inline-block ml-3">
-            <h4 class="mb-1">Refill 2</h4>
-            <h6>Est time 10:48 am</h6>
-            <div class="pill text-center">
-              <h6 class="m-0">Block CK3I94</h6>
+  
+          <div class="vehicle-option not-ready mt-3 p-3 px-4 d-flex justify-content-between" onclick="selectVehicle(this)">
+            <h5 class="my-auto">Robot 04</h5>
+            <div class="robot-stats d-flex justify-content-between">
+              <img class="my-auto" width="17" height="30" src="images/mission-start/full-battery.png">
+              <img class="my-auto" width="28" height="30" src="images/mission-start/low-herb.png">
+              <div class="my-auto d-inline-block text-center">
+                <img class="select" width="30" height="30" src="images/mission-start/not-ready-unselected.png">
+                <h6 class="mt-2">Select</h6>
+              </div>
             </div>
           </div>
+  
+          <div class="vehicle-option busy mt-3 p-3 px-4 d-flex justify-content-between">
+            <h5 class="my-auto">Robot 05</h5>
+            <h6 class="my-auto">Spraying in progress</h6>
+          </div>
+  
+          <!-- buttons -->
+          <div class="buttons">
+            <button class="btn btn-outline short back mt-5 mb-5" onclick="showRouteTab()">Back</button>
+            <button id="next" class="btn btn-dark long gg-button disabled mt-5 mb-5" onclick="showDetailsTab()">Next</button>
+          </div>
         </div>
-
-        <!-- buttons -->
-        <button class="btn btn-outline short back mt-5 mb-5" onclick="showVehicleTab()">Back</button>
-        <a href="progress.html"><button class="btn btn-dark long gg-button mt-5 mb-5 w-100" onclick="startRobot()">Start Mission</button></a>
+  
+        <!-- details tab -->
+        <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <!-- mission overview -->
+          <h3 class="bold">Mission Overview</h3>
+          <table class="table table-bordered mt-3">
+            <tbody>
+              <tr>
+                <td class="w-40">Blocks(3)</td>
+                <td>B30A39 - L14093 - J39W30</td>
+              </tr>
+              <tr>
+                <td>Total time</td>
+                <td>3 hr 30 min</td>
+              </tr>
+            </tbody>
+          </table>
+  
+          <!-- herbicide -->
+          <h5 class="bold">Herbicide</h5>
+          <table class="table table-bordered mt-3">
+            <tbody>
+              <tr>
+                <td class="w-40">Brand</td>
+                <td>Roundup</td>
+              </tr>
+              <tr>
+                <td>Est. gallons</td>
+                <td>45 gallons</td>
+              </tr>
+              <tr>
+                <td>Refills needed</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+  
+          <!-- battery -->
+          <h5 class="bold">Battery</h5>
+          <table class="table table-bordered mt-3">
+            <tbody>
+              <tr>
+                <td class="w-40">Recharge needed</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <!-- refills map -->
+          <img class="w-100 mt-4" src="images/mission-start/refills-map.png">
+  
+          <!-- refill details -->
+          <div class="d-flex justify-content-between mx-3 mt-5">
+            <div class="image-text-inline">
+              <img width="50" height="50" src="images/mission-start/refill-icon.png">
+              <div class="d-inline-block ms-3">
+                <h4 class="mb-1">Refill 1</h4>
+                <h6 class="mb-0">After Block B30A39</h6>
+              </div>
+            </div>
+            <div class="text-center my-auto">
+              <h6 class="mb-1">Est. time</h6>
+              <h5 class="bold mb-0">10:32 am</h5>
+            </div>
+          </div>
+  
+          <div class="d-flex justify-content-between mx-3 mt-5">
+            <div class="image-text-inline">
+              <img width="50" height="50" src="images/mission-start/refill-icon.png">
+              <div class="d-inline-block ms-3">
+                <h4 class="mb-1">Refill 2</h4>
+                <h6 class="mb-0">After Block L14093</h6>
+              </div>
+            </div>
+            <div class="text-center my-auto">
+              <h6 class="mb-1">Est. time</h6>
+              <h5 class="bold mb-0">11:57 am</h5>
+            </div>
+          </div>
+  
+          <!-- buttons -->
+          <button class="btn btn-outline short back mt-5 mb-5" onclick="showVehicleTab()">Back</button>
+          <a href="progress.html"><button class="btn btn-dark long gg-button mt-5 mb-5 w-100" onclick="startRobot()">Confirm Mission</button></a>
+        </div>
       </div>
     </div>
     
