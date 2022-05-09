@@ -17,7 +17,7 @@
 
     <title>SprayBot</title>
   </head>
-  <body class="progress-map">
+  <body class="progress-map" onload="startProgress()">
     <!-- map details -->
     <img class="menu" width="50" height="50" src="images/menu.png">
     <img class="layers" width="50" height="50" src="images/layers-icon.png">
@@ -70,14 +70,14 @@
             <div class="mt-4 p-2 icon-status">
               <img src="images/status/battery-icon.png">
               <div class="mt-2">
-                <h6 class="m-0">3 hr 47 min</h6>
+                <h6 id="battery" class="m-0">3 hr 47 min</h6>
                 <p class="m-0">remaining</p>
               </div>
             </div>
             <div class="mt-4 p-2 icon-status">
-              <img src="images/status/herb-icon.png">
+              <img id="herb-icon" src="images/status/herb-icon.png">
               <div class="mt-2">
-                <h6 class="m-0">2 hr 14 min</h6>
+                <h6 id="herbicide" class="m-0">2 hr 14 min</h6>
                 <p class="m-0">remaining</p>
               </div>
             </div>
@@ -90,26 +90,14 @@
           <!-- spray progress -->
           <div>
             <h4>Spray Progress</h4>
-            <div id="rep-blocks" class="mx-auto">
-              <div class="mt-2 d-table">
-                <div class="block p-3 text-center d-table-cell align-middle">
-                  <p class="bold mb-1">FINISH AT</p>
-                  <h5 class="bold">12:00PM</h5>
-                </div>
-                <div class="block p-3 text-center d-table-cell align-middle">
-                  <p class="bold mb-1">FINISH AT</p>
-                  <h5 class="bold">2:00PM</h5>
-                </div>
-                <div class="block p-3 text-center d-table-cell align-middle">
-                  <p class="bold mb-1">FINISH AT</p>
-                  <h5 class="bold">3:00PM</h5>
-                </div>
-                <div class="add-block p-3 text-center d-table-cell align-middle">
-                  <img class="mb-1" width="45" src="images/pre-progress/add-block.png">
-                  <h6 class="mt-1">Add Block</h6>
-                </div>
+            <div id="rep-blocks">
+              <div class="mt-2 d-flex">
+                <img width="120" height="190" src="images/status/block1.gif">
+                <img width="120" height="190" src="images/status/block2.gif">
+                <img width="120" height="190" src="images/status/block3.gif">
+                <img width="120" height="190" src="images/status/add-block.png">
               </div>
-              <h5 class="mx-3">&emsp;&ensp;B30A39 ----- L14093 ----- J39W30</h5>
+              <h5>&emsp;&ensp;B30A39 ------ L14093 ------ J39W30</h5>
             </div>
           </div>
         </div>

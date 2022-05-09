@@ -325,29 +325,8 @@ td {
 }
 
 #rep-blocks {
-  width: 380px;
+  width: 355px;
   overflow-x: scroll;
-}
-
-.block {
-  color: #179485;
-  width: 102px !important;
-  height: 180px;
-  background: #DCFFF9;
-  border-radius: 10px;
-}
-
-.add-block {
-  width: 102px;
-  height: 180px;
-  background: #FFF;
-  border-radius: 10px;
-  border: 2px dotted #7D7D7D;
-}
-
-.d-table {
-  border-collapse: separate;
-  border-spacing: 15px;
 }
 
 /****************************
@@ -355,7 +334,12 @@ td {
 ****************************/
 
 .progress-map {
-  background-image: url('../images/status/progress-map.png');
+  background-image: url('../images/status/progress-map.gif');
+  background-size: cover;
+}
+
+.complete-map {
+  background-image: url('../images/status/complete-map.png');
   background-size: cover;
 }
 
