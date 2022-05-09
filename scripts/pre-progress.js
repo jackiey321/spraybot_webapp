@@ -1,5 +1,5 @@
 $(window).load(function() {
-  const myTimeout = setTimeout(switchMap, 10000);
+  const myTimeout = setTimeout(switchMap, 5000);
   function switchMap() {
     $('.pre-map').css('background-image', 'url(images/pre-progress/pre-map2.png)');
     $('.disabled').removeClass('disabled');
@@ -8,11 +8,11 @@ $(window).load(function() {
 })
 
 $(window).on('shown.bs.offcanvas', function (e) {
-  $('.pre-layers').css('top', '70px');
-  $('.alert').css('height', '755px');
+  $('.pre-layers').css('top', '45px');
+  $('.alert').css('height', '665px');
 });
 
 $(window).on('hide.bs.offcanvas', function (e) {
-  $('.pre-layers').css('top', '600px');
+  $('.pre-layers').css('top', '485px');
   $('.alert').css('height', '220px');
 });
