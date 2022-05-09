@@ -17,12 +17,10 @@
 
     <title>SprayBot</title>
   </head>
-  <body class="map" onload="startProgress()">
+  <body class="progress-map">
     <!-- map details -->
     <img class="menu" width="50" height="50" src="images/menu.png">
     <img class="layers" width="50" height="50" src="images/layers-icon.png">
-    <img class="location" width="50" height="50" src="images/location.png">
-    <img class="robot-tag" width="85" height="97" src="images/robot-tag.png">
 
     <div class="default-panel" class="container">
       <div class="swipe">
@@ -35,7 +33,7 @@
           <h6 class="offcanvas-title">Mission Status</h6>
           <h2 class="offcanvas-title font-weight-bold">In Progress</h2>
         </div>
-        <h6 class="time-remaining">2 hrs 21 min left</h6>
+        <h6 class="time-remaining">3 hrs 29 min left</h6>
         <button type="button" class="btn-close text-reset panel-close"></button>
       </div>
       <div class="offcanvas-body">
@@ -54,19 +52,19 @@
             <h6 class="offcanvas-title">Mission Status</h6>
             <h2 class="offcanvas-title font-weight-bold">In Progress</h2>
           </div>
-          <h6 class="time-remaining">2 hrs 21 min left</h6>
+          <h6 class="time-remaining">3 hrs 29 min left</h6>
           <button type="button" class="btn-close text-reset panel-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
           <!-- mission progress -->
           <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
 
           <!-- robot status -->
           <div id="robot-status" class="d-flex justify-content-between">
             <div id="connectivity" class="mt-4 p-2">
-              <img class="w-100" src="images/status/robot.png">
+              <img class="w-100" src="images/status/robot.gif">
               <img class="w-100" src="images/status/connected.png">
             </div>
             <div class="mt-4 p-2 icon-status">
@@ -92,21 +90,27 @@
           <!-- spray progress -->
           <div>
             <h4>Spray Progress</h4>
-            <div id="rep-blocks" class="mt-2 d-table">
-              <div class="block p-3 text-center d-table-cell align-middle">
-                <h5>35 MINS</h5>
-                <p>REMAINING</p>
+            <div id="rep-blocks" class="mx-auto">
+              <div class="mt-2 d-table">
+                <div class="block p-3 text-center d-table-cell align-middle">
+                  <p class="bold mb-1">FINISH AT</p>
+                  <h5 class="bold">12:00PM</h5>
+                </div>
+                <div class="block p-3 text-center d-table-cell align-middle">
+                  <p class="bold mb-1">FINISH AT</p>
+                  <h5 class="bold">2:00PM</h5>
+                </div>
+                <div class="block p-3 text-center d-table-cell align-middle">
+                  <p class="bold mb-1">FINISH AT</p>
+                  <h5 class="bold">3:00PM</h5>
+                </div>
+                <div class="add-block p-3 text-center d-table-cell align-middle">
+                  <img class="mb-1" width="45" src="images/pre-progress/add-block.png">
+                  <h6 class="mt-1">Add Block</h6>
+                </div>
               </div>
-              <div class="block p-3 text-center d-table-cell align-middle">
-                <h5>35 MINS</h5>
-                <p>REMAINING</p>
-              </div>
-              <div class="add-block p-3 text-center d-table-cell align-middle">
-                <img class="mb-1" width="45" src="images/status/add-block.png">
-                <p>Add Block</p>
-              </div>
+              <h5 class="mx-3">&emsp;&ensp;B30A39 ----- L14093 ----- J39W30</h5>
             </div>
-            <h5 class="mx-3">&emsp;&ensp;AX9077 ------ MB4035</h5>
           </div>
         </div>
       </div>

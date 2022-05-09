@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="styles/styles.css">
 
     <!-- scripts -->
+    <script src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="scripts/robot-start.js"></script>
     <script src="scripts/pre-progress.js"></script>
 
     <!-- favicon -->
@@ -20,7 +22,12 @@
   <body class="pre-map">
     <!-- map details -->
     <img class="menu" width="50" height="50" src="images/menu.png">
-    <img class="layers" width="50" height="50" src="images/layers-icon.png">
+    <img class="pre-layers" width="50" height="50" src="images/layers-icon.png">
+
+    <div class="alert d-flex">
+      <img width="30" height="30" src="images/pre-progress/alert.png">&ensp;
+      <h4 id="alert-message" class="bold mt-1">Bring robot to starting point</h4>
+    </div>
 
     <div class="default-panel" class="container">
       <div class="swipe">
@@ -84,7 +91,7 @@
           </div>
 
           <!-- start mission -->
-          <a href="progress.html"><button class="btn btn-dark gg-button disabled mt-4 w-100" onclick="startRobot()">Start Mission</button></a>
+          <button id="start" class="btn btn-dark gg-button disabled mt-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#start-mission" onclick="startRobot()">Start Mission</button>
           <hr>
 
           <!-- spray progress -->
@@ -110,6 +117,20 @@
                 </div>
               </div>
               <h5 class="mx-3">&emsp;&ensp;B30A39 ----- L14093 ----- J39W30</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- start mission modal -->
+      <div class="modal" id="start-mission" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center m-5">
+              <h3>Congrats! <br> Mission is now in progress.</h3>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-dark long gg-button" onclick="location.href='progress.html';">Done</button>
             </div>
           </div>
         </div>
