@@ -1,7 +1,7 @@
 $(window).on('shown.bs.offcanvas', function (e) {
-  $('.home-layers').css('top', '105px');
+  $('.home-layers').css('top', '100px');
 });
 
 $(window).on('hide.bs.offcanvas', function (e) {
-  $('.home-layers').css('top', '490px');
+  $('.home-layers').css('top', '485px');
 });
